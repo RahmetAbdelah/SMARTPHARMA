@@ -1,4 +1,24 @@
 <script>
+
+
+ const regionSelect = document.getElementById("region");
+  const addisSubcity = document.getElementById("addis-subcity");
+  const otherCity = document.getElementById("other-city");
+
+  regionSelect.addEventListener("change", () => {
+    if (regionSelect.value === "Addis Ababa") {
+      addisSubcity.classList.remove("hidden");
+      otherCity.classList.add("hidden");
+    } else {
+      addisSubcity.classList.add("hidden");
+      otherCity.classList.remove("hidden");
+    }
+  });
+
+
+
+
+      
       function check_password(){
         const password=document.getElementById("password").value;
         const confirm_password=document.getElementById("confirm_password").value;
