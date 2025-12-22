@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  fetch("../components/navbar.html")
+  fetch("../html/components/navbar.html")
     .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
+    .then(html => {
+      document.getElementById("navbar-placeholder").innerHTML = html;
 
       const toggle = document.getElementById("menu-toggle");
       const links = document.getElementById("nav-links");
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  fetch("../components/footer.html")
+  fetch("../html/components/footer.html")
     .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
+    .then(html => {
+      document.getElementById("footer-placeholder").innerHTML = html;
     });
 
 });
